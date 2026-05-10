@@ -100,7 +100,8 @@ jobs:
         run: pnpm install
       - name: Build project
         run: |
-          sh ./ci-release-build.sh
+          sed -i 's/@shiro\/web/@yohaku\/web/g' ci-release-build.sh
+            sh ./ci-release-build.sh
 
       # - uses: actions/upload-artifact@v4
       #   with:
