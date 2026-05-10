@@ -48,7 +48,7 @@ jobs:
           repository: innei-dev/Yohaku
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
           fetch-depth: 0
-          lfs: true
+          lfs: true             submodules: recursive
 
       - name: Use content from prev job and compare
         id: use_content
@@ -84,7 +84,7 @@ jobs:
           repository: innei-dev/Yohaku
           token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
           fetch-depth: 0
-          lfs: true
+          lfs: true             submodules: recursive
 
       - name: Checkout LFS objects
         run: git lfs checkout
