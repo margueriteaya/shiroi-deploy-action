@@ -162,6 +162,11 @@ jobs:
       - name: Move assets to root
         run: mv assets/release.zip release.zip
 
+      - uses: actions/checkout@v4
+        with:
+          repository: margueriteaya/shiroi-deploy-action
+          path: deploy-action-repo
+
       - name: Prepare standalone PM2 config
         run: cp pm2/ecosystem.config.js ecosystem.config.js
 
